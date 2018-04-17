@@ -2,7 +2,7 @@
 
 VirtualBox + tomcat8.5(3대) + nginx 를 이용하여 웹서버 구동
 ==============================================================================
-
+~~~~
 > 문제
 > VirtualBox 에 가성os(centos7)을 설치 톰캣 3개를 이용하여 nginx 와 연동하는 문제
 > - abc1.site.co.kr localhost:8080
@@ -12,20 +12,20 @@ VirtualBox + tomcat8.5(3대) + nginx 를 이용하여 웹서버 구동
 >
 >nignx worker thread 는 20개로 셋팅하세요
 >access / error log 경로도 따로 만드세요
-***
+~~~~
 
-1. virtualbox 설치 (https://www.virtualbox.org/wiki/Downloads)
+1. virtualbox 설치 (<https://www.virtualbox.org/wiki/Downloads>)
  자신의 맞는 버젼의 virtualbox 를 다운 로드 및 설치 한다.
-* 참고 사이트 : VirtualBox에 CentOS 7 설치 ( https://zetawiki.com/wiki/VirtualBox%EC%97%90_CentOS_7_%EC%84%A4%EC%B9%98 )
+* 참고 사이트 : VirtualBox에 CentOS 7 설치 (<https://zetawiki.com/wiki/VirtualBox%EC%97%90_CentOS_7_%EC%84%A4%EC%B9%98>)
 * virtualbox 를 설치 후 네트워크 설정에서 삽질을 많이 하였다.
  필요한 설정은 '호스트 네트워크 관리자' 인데 어디서 만들어야 할지에 대한 삽질을 많이 하였다.
   - 전역변수 호스트 네트워크 관리자 추가
 
-1-1. centOS (https://www.centos.org/download/) 에서 DVD ISO 버젼을 다운로드
+1-1. centOS (<https://www.centos.org/download/>) 에서 DVD ISO 버젼을 다운로드
 
 1-2. 호스트 PC 와 CentOS7 SSH 접속하기 위한 네트워크 설정(이미지로 대처)
 
-2. centOS 에 자바 설치 (참조: https://zetawiki.com/wiki/CentOS_JDK_%EC%84%A4%EC%B9%98)
+2. centOS 에 자바 설치 (참조: <https://zetawiki.com/wiki/CentOS_JDK_%EC%84%A4%EC%B9%98>)
 2-1. java 설치 확인
  - java -version
 2-2. yum 을 이용하여 java 설치 가능 확인
@@ -42,7 +42,7 @@ VirtualBox + tomcat8.5(3대) + nginx 를 이용하여 웹서버 구동
   - cp /tomcat-8.5.30 /example/tomcat2
   - cp /tomcat-8.5.30 /example/tomcat3
 
-3-3. 톰캣의 포트 변경처리 (참조: http://wookoa.tistory.com/102)
+3-3. 톰캣의 포트 변경처리 (참조: <http://wookoa.tistory.com/102>)
 * 1씩 증가하였음[편할대로 설정]
 server port, http, ajp 의 포트들을 변경 처리
 
@@ -51,10 +51,10 @@ server port, http, ajp 의 포트들을 변경 처리
 3-5. 호스트 PC 에서 각각의 톰캣(tomcat1, tomcat2, tomcat3)에 접속이 가능 한지 확인
  - http://가상PC의아이피:설정한포트
 
-** 가상서버의 방화벽 해제하기 (참조: http://blog.netchk.net/?p=1116)
+** 가상서버의 방화벽 해제하기 (참조: <http://blog.netchk.net/?p=1116>)
 필자는 특정포트의 허용이 아닌 방화벽을 해제하였음.
 
-4. nginx 설치 (참조: https://www.lesstif.com/pages/viewpage.action?pageId=25100304)
+4. nginx 설치 (참조: <https://www.lesstif.com/pages/viewpage.action?pageId=25100304>)
 
 sudo firewall-cmd --permanent --zone=public --add-service=http
 sudo firewall-cmd --permanent --zone=public --add-service=https
