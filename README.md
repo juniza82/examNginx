@@ -54,6 +54,7 @@ access / error log 경로도 따로 만드세요
     <img src="https://github.com/juniza82/examNginx/blob/master/tomcat2_server.png">
 
 3-4. 각각의 톰캣(tomcat1, tomcat2, tomcat3) 구동하여 동시에 실행되는지 확인
+    <img src="https://github.com/juniza82/examNginx/blob/master/tomcatStatus.png">
 
 3-5. 호스트 PC 에서 각각의 톰캣(tomcat1, tomcat2, tomcat3)에 접속이 가능 한지 확인
   - http://가상PC의아이피:설정한포트
@@ -120,3 +121,8 @@ server {
 
 6. CentOS 에서는 웹서버가 다른 외부 URL을 호출이 처음에는 금지되어 있다. (참조: http://www.systemhook.net/?tag=mysql)
   - setsebool -P httpd_can_network_connect on
+  
+7. 호스트 PC 에서 구동 확인
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcatOne.png">
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcatTwo.png">
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcatThree.png">
