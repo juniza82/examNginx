@@ -1,3 +1,18 @@
+VirtualBox 에 가성os(centos7)을 설치
+
+톰캣 3개를 이용하여 nginx 와 연동하는 문제
+
+일단 예제를 만드세요
+ - abc1.chacare.co.kr localhost:8080
+ - abc2.chacare.co.kr localhost:8081
+ - abc3.chacare.co.kr localhost:8082
+엔지닉스에 요청이 아래로 왔을때 해당하는 톰켓으로 가도록 구성하는 예제를 만드세요
+
+nignx worker thread 는 20개로 셋팅하세요
+access / error log 경로도 따로 만드세요
+이 설정이 과제가 완료되면 chacare nginx 구성을 시키겠습니다.
+
+
 1. virtualbox 설치 (https://www.virtualbox.org/wiki/Downloads)
  자신의 맞는 버젼의 virtualbox 를 다운 로드 및 설치 한다.
 * 참고 사이트 : VirtualBox에 CentOS 7 설치 ( https://zetawiki.com/wiki/VirtualBox%EC%97%90_CentOS_7_%EC%84%A4%EC%B9%98 )
