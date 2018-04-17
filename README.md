@@ -10,8 +10,7 @@ VirtualBox 에 가성os(centos7)을 설치
 
 nignx worker thread 는 20개로 셋팅하세요
 access / error log 경로도 따로 만드세요
-이 설정이 과제가 완료되면 chacare nginx 구성을 시키겠습니다.
-
+==============================================================================
 
 1. virtualbox 설치 (https://www.virtualbox.org/wiki/Downloads)
  자신의 맞는 버젼의 virtualbox 를 다운 로드 및 설치 한다.
