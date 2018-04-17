@@ -84,7 +84,7 @@ access / error log 경로도 따로 만드세요
   - sudo firewall-cmd --reload
 
 
-*최신의 nginx를 받기 위한 설정 
+  * 최신의 nginx를 받기 위한 설정 
   vi /etc/yum.repos.d/nginx.repo
 
   [nginx]
