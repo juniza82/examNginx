@@ -123,6 +123,6 @@ server {
   - setsebool -P httpd_can_network_connect on
   
 7. 호스트 PC 에서 구동 확인
-<img src="https://github.com/juniza82/examNginx/blob/master/tomcatOne.png">
-<img src="https://github.com/juniza82/examNginx/blob/master/tomcatTwo.png">
-<img src="https://github.com/juniza82/examNginx/blob/master/tomcatThree.png">
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcatOne.png" width="450" height="350">
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcatTwo.png" width="450" height="350">
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcatThree.png" width="450" height="350">
