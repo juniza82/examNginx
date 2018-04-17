@@ -46,12 +46,12 @@ access / error log 경로도 따로 만드세요
   >  - cp /tomcat-8.5.30 /example/tomcat1
   >  - cp /tomcat-8.5.30 /example/tomcat2
   >  - cp /tomcat-8.5.30 /example/tomcat3
-<img src="https://github.com/juniza82/examNginx/blob/master/tomcat%203개%20위치.png" width="400" height="300">
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcat%203개%20위치.png">
 
 3-3. 톰캣의 포트 변경처리 (참조: <http://wookoa.tistory.com/102>)
   * 1씩 증가하였음[편할대로 설정]
     server port, http, ajp 의 포트들을 변경 처리
-    <img src="https://github.com/juniza82/examNginx/blob/master/tomcat2_server.png" width="400" height="300">
+    <img src="https://github.com/juniza82/examNginx/blob/master/tomcat2_server.png">
 
 3-4. 각각의 톰캣(tomcat1, tomcat2, tomcat3) 구동하여 동시에 실행되는지 확인
 
