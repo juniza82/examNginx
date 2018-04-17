@@ -31,25 +31,25 @@ access / error log 경로도 따로 만드세요
 2. centOS 에 자바 설치 (참조: <https://zetawiki.com/wiki/CentOS_JDK_설치>)
 
 
-2-1. java 설치 확인
+2.1. java 설치 확인
   - java -version
 
 
-2-2. yum 을 이용하여 java 설치 가능 확인
+2.2. yum 을 이용하여 java 설치 가능 확인
   - yum list java*jdk-devel
 
 
-2-3. yum 을 이용하여 java 설치
+2.3. yum 을 이용하여 java 설치
   - yum install java-1.8.0-openjdk-devel.x86_64 (설치하고자 하는 java 파일을 입력하면 된다.)
 
 
 3. apache tomcat-8.5.30 설치 (참조: http://apache.mirror.cdnetworks.com/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz)
 
 
-3-1. 다운받은 톰캣 파일 [tar -zxvf apache-tomcat-8.5.30.tar.gz] 를 이용하여 해당 폴더에 압축 풀기
+3.1. 다운받은 톰캣 파일 [tar -zxvf apache-tomcat-8.5.30.tar.gz] 를 이용하여 해당 폴더에 압축 풀기
 
 
-3-2. 톰캣을 3개를 구동하기 위해서 특정 폴더에 복사 이동
+3.2. 톰캣을 3개를 구동하기 위해서 특정 폴더에 복사 이동
   >ex) /tomcat-8.5.30 을 /example 밑에 3개의 톰캣을 만들려고 할때
   >  - cp /tomcat-8.5.30 /example/tomcat1
   >  - cp /tomcat-8.5.30 /example/tomcat2
@@ -57,17 +57,17 @@ access / error log 경로도 따로 만드세요
 <img src="https://github.com/juniza82/examNginx/blob/master/tomcat%203개%20위치.png">
 
 
-3-3. 톰캣의 포트 변경처리 (참조: <http://wookoa.tistory.com/102>)
+3.3. 톰캣의 포트 변경처리 (참조: <http://wookoa.tistory.com/102>)
   * 1씩 증가하였음[편할대로 설정]
     server port, http, ajp 의 포트들을 변경 처리
     <img src="https://github.com/juniza82/examNginx/blob/master/tomcat2_server.png">
 
 
-3-4. 각각의 톰캣(tomcat1, tomcat2, tomcat3) 구동하여 동시에 실행되는지 확인
+3.4. 각각의 톰캣(tomcat1, tomcat2, tomcat3) 구동하여 동시에 실행되는지 확인
     <img src="https://github.com/juniza82/examNginx/blob/master/tomcatStatus.png">
 
 
-3-5. 호스트 PC 에서 각각의 톰캣(tomcat1, tomcat2, tomcat3)에 접속이 가능 한지 확인
+3.5. 호스트 PC 에서 각각의 톰캣(tomcat1, tomcat2, tomcat3)에 접속이 가능 한지 확인
   - http://가상PC의아이피:설정한포트
 
 
@@ -93,20 +93,20 @@ access / error log 경로도 따로 만드세요
   제대로 반영 되었는지 yum info 로 확인
 
 
-4-1. nginx 설치
+4.1. nginx 설치
   - yum install -y nginx
 
 
-4-2. nginx 부팅시 자동 구동하도록 설정
+4.2. nginx 부팅시 자동 구동하도록 설정
   - systemctl start nginx
   - systemctl enable nginx
 
 
-4-3. 관리하고자 하는 사이트의 설정 파일 디렉토리를 만들어 준다.
+4.3. 관리하고자 하는 사이트의 설정 파일 디렉토리를 만들어 준다.
   - mkdir /etc/nginx/sites-enabled/ 
 
 
-4-4. 관리하고자 하는 사이트의 설정 파일들을 생성
+4.4. 관리하고자 하는 사이트의 설정 파일들을 생성
   - abc1.site.co.kr.conf
 ~~~~
 server {
@@ -131,7 +131,7 @@ server {
   - abc3.site.co.kr.conf
 
 
-4-5. nginx 의 설정을 reload 한다.
+4.5. nginx 의 설정을 reload 한다.
   - systemctl reload Nginx
 
 
