@@ -86,25 +86,25 @@ access / error log 경로도 따로 만드세요
 
 4-4. 관리하고자 하는 사이트의 설정 파일들을 생성
   - abc1.site.co.kr.conf
-
-  >server {
-  >    listen       80;
-  >    server_name  abc1.site.co.kr;
-  >    client_max_body_size 10M;
-  >    charset utf-8;
-  >    location / {
-  >        proxy_pass http://127.0.0.1:8080;
-  >        proxy_set_header Host $host;
-  >        proxy_set_header X-Forwarded-Host $host;
-  >        proxy_set_header X-Forwarded-Server $host;
-  >        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  >    }
-  > 
-  >    location ~ /\.ht {
-  >        allow all;
-  >    }
-  >}
-
+~~~~
+  server {
+      listen       80;
+      server_name  abc1.site.co.kr;
+      client_max_body_size 10M;
+      charset utf-8;
+      location / {
+          proxy_pass http://127.0.0.1:8080;
+          proxy_set_header Host $host;
+          proxy_set_header X-Forwarded-Host $host;
+          proxy_set_header X-Forwarded-Server $host;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      }
+   
+      location ~ /\.ht {
+          allow all;
+      }
+  }
+~~~~
   - abc2.site.co.kr.conf
   - abc3.site.co.kr.conf
 
