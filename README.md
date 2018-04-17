@@ -22,6 +22,8 @@ access / error log 경로도 따로 만드세요
 
 1-1. centOS (https://www.centos.org/download/) 에서 DVD ISO 버젼을 다운로드
 
+1-2. 호스트 PC 와 CentOS7 SSH 접속하기 위한 네트워크 설정(이미지로 대처)
+
 2. centOS 에 자바 설치 (참조: https://zetawiki.com/wiki/CentOS_JDK_%EC%84%A4%EC%B9%98)
 2-1. java 설치 확인
  - java -version
@@ -30,7 +32,7 @@ access / error log 경로도 따로 만드세요
 2-3. yum 을 이용하여 java 설치
  - yum install java-1.8.0-openjdk-devel.x86_64 (설치하고자 하는 java 파일을 입력하면 된다.)
 
-일단 /rooe 에 juniza82 라는 폴더를 만들고
+/rooe 에 juniza82 라는 폴더를 만들고
 3. apache tomcat-8.5.30 설치 (참조: http://apache.mirror.cdnetworks.com/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz)
 3-1. 다운받은 톰캣 파일 [tar -zxvf apache-tomcat-8.5.30.tar.gz] 를 이용하여 해당 폴더에 압축 풀기
 3-2. 톰캣을 3개를 구동하기 위해서 특정 폴더에 복사 이동
