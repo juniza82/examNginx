@@ -26,9 +26,6 @@ access / error log 경로도 따로 만드세요
     - 전역도구 - 만들기 - vboxnet0 란 이름으로 네트워크가 하나 생성 됨
 <img src="https://github.com/juniza82/examNginx/blob/master/호스트PC와CentOS7SSH접속하기위한네트워크설정.png" width="500" height="400">
 
-![Alt text](https://github.com/juniza82/examNginx/blob/master/호스트PC와CentOS7SSH접속하기위한네트워크설정.png){: width="500" height="400"}
-
-
 2. centOS 에 자바 설치 (참조: <https://zetawiki.com/wiki/CentOS_JDK_설치>)
 
 2-1. java 설치 확인
@@ -49,10 +46,12 @@ access / error log 경로도 따로 만드세요
   >  - cp /tomcat-8.5.30 /example/tomcat1
   >  - cp /tomcat-8.5.30 /example/tomcat2
   >  - cp /tomcat-8.5.30 /example/tomcat3
+<img src="https://github.com/juniza82/examNginx/blob/master/tomcat%203개%20위치.png" width="500" height="400">
 
 3-3. 톰캣의 포트 변경처리 (참조: <http://wookoa.tistory.com/102>)
   * 1씩 증가하였음[편할대로 설정]
     server port, http, ajp 의 포트들을 변경 처리
+    <img src="https://github.com/juniza82/examNginx/blob/master/tomcat2_server.png" width="500" height="400">
 
 3-4. 각각의 톰캣(tomcat1, tomcat2, tomcat3) 구동하여 동시에 실행되는지 확인
 
