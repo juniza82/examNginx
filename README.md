@@ -15,15 +15,14 @@ access / error log 경로도 따로 만드세요
 ~~~~
 
 1. virtualbox 설치 (<https://www.virtualbox.org/wiki/Downloads>)
- 자신의 맞는 버젼의 virtualbox 를 다운 로드 및 설치 한다.
-* 참고 사이트 : VirtualBox에 CentOS 7 설치 (<https://zetawiki.com/wiki/VirtualBox%EC%97%90_CentOS_7_%EC%84%A4%EC%B9%98>)
+* 참고 사이트 : VirtualBox에 CentOS 7 설치 (<https://zetawiki.com/wiki/VirtualBox에_CentOS_7_설치>)
 * virtualbox 를 설치 후 네트워크 설정에서 삽질을 많이 하였다.
  필요한 설정은 '호스트 네트워크 관리자' 인데 어디서 만들어야 할지에 대한 삽질을 많이 하였다.
   - 전역변수 호스트 네트워크 관리자 추가
 
-1-1. centOS (<https://www.centos.org/download/>) 에서 DVD ISO 버젼을 다운로드
+1.1. centOS (<https://www.centos.org/download/>) 에서 DVD ISO 버젼을 다운로드
 
-1-2. 호스트 PC 와 CentOS7 SSH 접속하기 위한 네트워크 설정(이미지로 대처)
+1.2. 호스트 PC 와 CentOS7 SSH 접속하기 위한 네트워크 설정(이미지로 대처)
 
 2. centOS 에 자바 설치 (참조: <https://zetawiki.com/wiki/CentOS_JDK_%EC%84%A4%EC%B9%98>)
 2-1. java 설치 확인
