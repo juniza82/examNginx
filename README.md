@@ -10,6 +10,8 @@ VirtualBox 에 가성os(centos7)을 설치
 
 nignx worker thread 는 20개로 셋팅하세요
 access / error log 경로도 따로 만드세요
+
+VirtualBox + tomcat8.5(3대) + nginx 를 이용하여 웹서버 
 ==============================================================================
 
 1. virtualbox 설치 (https://www.virtualbox.org/wiki/Downloads)
