@@ -24,7 +24,9 @@ access / error log 경로도 따로 만드세요
 * virtualbox 를 설치 후 네트워크 설정에서 삽질을 많이 하였다.
     필요한 설정은 '호스트 네트워크 관리자' 인데 어디서 만들어야 할지에 대한 삽질을 많이 하였다.
     - 전역도구 - 만들기 - vboxnet0 란 이름으로 네트워크가 하나 생성 됨
-    ![Alt text](https://github.com/juniza82/examNginx/blob/master/호스트PC와CentOS7SSH접속하기위한네트워크설정.png){: width="500" height="400"}
+<img src="https://github.com/juniza82/examNginx/blob/master/호스트PC와CentOS7SSH접속하기위한네트워크설정.png" width="500" height="400">
+
+![Alt text](https://github.com/juniza82/examNginx/blob/master/호스트PC와CentOS7SSH접속하기위한네트워크설정.png){: width="500" height="400"}
 
 
 2. centOS 에 자바 설치 (참조: <https://zetawiki.com/wiki/CentOS_JDK_설치>)
