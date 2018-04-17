@@ -27,6 +27,7 @@ access / error log 경로도 따로 만드세요
     - 전역도구 - 만들기 - vboxnet0 란 이름으로 네트워크가 하나 생성 됨
 <img src="https://github.com/juniza82/examNginx/blob/master/호스트PC와CentOS7SSH접속하기위한네트워크설정.png" width="500" height="400">
 
+***
 
 2. centOS 에 자바 설치 (참조: <https://zetawiki.com/wiki/CentOS_JDK_설치>)
 
@@ -42,6 +43,7 @@ access / error log 경로도 따로 만드세요
 2.3. yum 을 이용하여 java 설치
   - yum install java-1.8.0-openjdk-devel.x86_64 (설치하고자 하는 java 파일을 입력하면 된다.)
 
+***
 
 3. apache tomcat-8.5.30 설치 (참조: http://apache.mirror.cdnetworks.com/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz)
 
@@ -74,6 +76,7 @@ access / error log 경로도 따로 만드세요
 * 가상서버의 방화벽 해제하기 (참조: <http://blog.netchk.net/?p=1116>)
   필자는 특정포트의 허용이 아닌 방화벽을 해제하였음.
 
+***
 
 4. nginx 설치 (참조: <https://www.lesstif.com/pages/viewpage.action?pageId=25100304>)
   - sudo firewall-cmd --permanent --zone=public --add-service=http
@@ -134,15 +137,18 @@ server {
 4.5. nginx 의 설정을 reload 한다.
   - systemctl reload Nginx
 
+***
 
 5. 호스트 pc 의 hosts 파일에 가상서버의 IP 를 입력한다.
   - vi /etc/hosts
   - 192.168.56.1(가상서버의 IP)  abc1.site.co.kr abc2.site.co.kr abc3.site.co.kr
 
+***
 
 6. CentOS 에서는 웹서버가 다른 외부 URL을 호출이 처음에는 금지되어 있다. (참조: http://www.systemhook.net/?tag=mysql)
   - setsebool -P httpd_can_network_connect on
 
+***
 
 7. 호스트 PC 에서 구동 확인
 <img src="https://github.com/juniza82/examNginx/blob/master/tomcatOne.png" width="450" height="350">
