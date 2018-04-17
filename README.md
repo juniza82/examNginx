@@ -1,8 +1,9 @@
 
 
-VirtualBox + tomcat8.5(3대) + nginx 를 이용하여 웹서버 
+VirtualBox + tomcat8.5(3대) + nginx 를 이용하여 웹서버 구동
 ==============================================================================
-문제
+
+> 문제
 VirtualBox 에 가성os(centos7)을 설치 톰캣 3개를 이용하여 nginx 와 연동하는 문제
 
  - abc1.site.co.kr localhost:8080
