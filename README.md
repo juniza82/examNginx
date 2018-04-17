@@ -15,15 +15,17 @@ access / error log 경로도 따로 만드세요
 ~~~~
 
 
-1. virtualbox 설치 (<https://www.virtualbox.org/wiki/Downloads>)
+1. virtualbox 설치(v5.2.8) (<https://www.virtualbox.org/wiki/Downloads>)
   * 참고 사이트 : VirtualBox에 CentOS 7 설치 (<https://zetawiki.com/wiki/VirtualBox에_CentOS_7_설치>)
-  * virtualbox 를 설치 후 네트워크 설정에서 삽질을 많이 하였다.
-    필요한 설정은 '호스트 네트워크 관리자' 인데 어디서 만들어야 할지에 대한 삽질을 많이 하였다.
-    - 전역변수 호스트 네트워크 관리자 추가
-
+  
 1.1. centOS (<https://www.centos.org/download/>) 에서 DVD ISO 버젼을 다운로드
 
-1.2. 호스트 PC 와 CentOS7 SSH 접속하기 위한 네트워크 설정(이미지로 대처)
+1.2. 호스트 PC 와 CentOS7 SSH 접속하기 위한 네트워크 설정
+* virtualbox 를 설치 후 네트워크 설정에서 삽질을 많이 하였다.
+    필요한 설정은 '호스트 네트워크 관리자' 인데 어디서 만들어야 할지에 대한 삽질을 많이 하였다.
+    - 전역도구 - 만들기 - vboxnet0 란 이름으로 네트워크가 하나 생성 됨
+    ![Alt text](/examNginx/blob/master/호스트PC와CentOS7SSH접속하기위한네트워크설정.png)
+
 
 2. centOS 에 자바 설치 (참조: <https://zetawiki.com/wiki/CentOS_JDK_설치>)
 
@@ -87,23 +89,23 @@ access / error log 경로도 따로 만드세요
 4-4. 관리하고자 하는 사이트의 설정 파일들을 생성
   - abc1.site.co.kr.conf
 ~~~~
-  server {
-      listen       80;
-      server_name  abc1.site.co.kr;
-      client_max_body_size 10M;
-      charset utf-8;
-      location / {
-          proxy_pass http://127.0.0.1:8080;
-          proxy_set_header Host $host;
-          proxy_set_header X-Forwarded-Host $host;
-          proxy_set_header X-Forwarded-Server $host;
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      }
-   
-      location ~ /\.ht {
-          allow all;
-      }
-  }
+server {
+    listen       80;
+    server_name  abc1.site.co.kr;
+    client_max_body_size 10M;
+    charset utf-8;
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location ~ /\.ht {
+        allow all;
+    }
+}
 ~~~~
   - abc2.site.co.kr.conf
   - abc3.site.co.kr.conf
