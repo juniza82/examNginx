@@ -45,7 +45,7 @@ access / error log 경로도 따로 만드세요
 
 ***
 
-3. apache tomcat-8.5.30 설치 (참조: http://apache.mirror.cdnetworks.com/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz)
+3. apache tomcat-8.5.30 설치 (참조: <http://apache.mirror.cdnetworks.com/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz>)
 
 
 3.1. 다운받은 톰캣 파일 [tar -zxvf apache-tomcat-8.5.30.tar.gz] 를 이용하여 해당 폴더에 압축 풀기
@@ -154,3 +154,14 @@ server {
 <img src="https://github.com/juniza82/examNginx/blob/master/tomcatOne.png" width="450" height="350">
 <img src="https://github.com/juniza82/examNginx/blob/master/tomcatTwo.png" width="450" height="350">
 <img src="https://github.com/juniza82/examNginx/blob/master/tomcatThree.png" width="450" height="350">
+
+***
+
+8. NGINX 로드 밸런싱 설정 (Load Balancing) [참조: <https://www.lesstif.com/pages/viewpage.action?pageId=35357063>]
+ - nginx.conf 에 upstram 설정 추가
+ <img src="https://github.com/juniza82/examNginx/blob/master/nginx.conf.png">
+
+
+***
+***
+***
