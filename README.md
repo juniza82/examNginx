@@ -159,9 +159,20 @@ server {
 
 8. NGINX 로드 밸런싱 설정 (Load Balancing) [참조: <https://www.lesstif.com/pages/viewpage.action?pageId=35357063>]
  - nginx.conf 에 upstram 설정 추가
+>   upstream tomcatserver {
+>       ## proxy 를 사용하는 경우
+>       server 127.0.0.1:8080;
+>       server 127.0.0.1:8081;
+>       server 127.0.0.1:8082;
+>   }
  <img src="https://github.com/juniza82/examNginx/blob/master/nginx.conf.png">
 
-
+8.1. tomcat1.conf, tomcat2.conf, tomcat3.conf 의 proxty_pass 부분을 8번의 upstream의 이름(tomcatserver)로 바꿔준다.
+  - 기존 proxy_pass http://127.0.0.1:8080; 을 proxy_pass http://tomcatserver; 으로 변경 해준다.
+  
+8.2. nginx 를 reload 해준다.
+  - 별다른 설정을 하지 않았기 때문에 RR(round-robin) 방식으로 작동한다.
+  - 필요한 기능에 따라서 nginx 에 설정 해주면 된다.
 ***
 ***
 ***
